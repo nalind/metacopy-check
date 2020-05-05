@@ -1,0 +1,27 @@
+# github.com/containers/storage v1.19.1
+## explicit
+github.com/containers/storage/pkg/fileutils
+github.com/containers/storage/pkg/ioutils
+github.com/containers/storage/pkg/longpath
+github.com/containers/storage/pkg/mount
+github.com/containers/storage/pkg/system
+# github.com/docker/go-units v0.4.0
+github.com/docker/go-units
+# github.com/konsorten/go-windows-terminal-sequences v1.0.3
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/sirupsen/logrus v1.6.0
+## explicit
+github.com/sirupsen/logrus
+# golang.org/x/net v0.0.0-20190628185345-da137c7871d7
+golang.org/x/net/context
+# golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3
+## explicit
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# k8s.io/klog v1.0.0
+## explicit
+k8s.io/klog

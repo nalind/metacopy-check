@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: metacopy-check
+  namespace: default
+spec:
+  restartPolicy: Never
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  containers:
+  - image: quay.io/nalind/testing:metacopy-check
+    imagePullPolicy: Always
+    name: metacopy-check
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    command:
+    - /metacopy-check
+    args:
+    - /check-volume-0
+    - /check-volume-1
+    - /check-volume-2
+    - /check-volume-3
+    - /check-volume-4
+    - /check-volume-5
+    - /check-volume-6
+    - /check-volume-7
+    - /check-volume-8
+    - /check-volume-9
+    volumeMounts:
+    - mountPath: /check-volume-0
+      name: check-volume-0
+    - mountPath: /check-volume-1
+      name: check-volume-1
+    - mountPath: /check-volume-2
+      name: check-volume-2
+    - mountPath: /check-volume-3
+      name: check-volume-3
+    - mountPath: /check-volume-4
+      name: check-volume-4
+    - mountPath: /check-volume-5
+      name: check-volume-5
+    - mountPath: /check-volume-6
+      name: check-volume-6
+    - mountPath: /check-volume-7
+      name: check-volume-7
+    - mountPath: /check-volume-8
+      name: check-volume-8
+    - mountPath: /check-volume-9
+      name: check-volume-9
+  volumes:
+  - emptyDir: {}
+    name: check-volume-0
+  - emptyDir: {}
+    name: check-volume-1
+  - emptyDir: {}
+    name: check-volume-2
+  - emptyDir: {}
+    name: check-volume-3
+  - emptyDir: {}
+    name: check-volume-4
+  - emptyDir: {}
+    name: check-volume-5
+  - emptyDir: {}
+    name: check-volume-6
+  - emptyDir: {}
+    name: check-volume-7
+  - emptyDir: {}
+    name: check-volume-8
+  - emptyDir: {}
+    name: check-volume-9
